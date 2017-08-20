@@ -15,5 +15,5 @@
         "volt_sdram_i": "volt/sdram_i",
         "volt_sdram_p": "volt/sdram_p"
     },
-    "interval": 5
+    "interval": 300
 }
