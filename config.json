@@ -1,0 +1,19 @@
+{
+    "broker": {
+        "url": "mqtt://pandora.local",
+        "options": {
+            "port": 1883,
+            "client_id": "pi-monitor-pandora"
+        }
+    },
+    "topic": {
+        "base": "user/vish/device/pandora",
+        "temp_cpu": "temp/cpu",
+        "temp_gpu": "temp/gpu",
+        "volt_core": "volt/core",
+        "volt_sdram_c": "volt/sdram_c",
+        "volt_sdram_i": "volt/sdram_i",
+        "volt_sdram_p": "volt/sdram_p"
+    },
+    "interval": 5
+}
