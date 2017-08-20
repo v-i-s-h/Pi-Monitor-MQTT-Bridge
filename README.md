@@ -1,13 +1,28 @@
 # Pi System MQTT Bridge
 
-A MQTT Client to send pi system status periodically through MQTT.
+A MQTT client to send pi system status periodically through MQTT. The following
+system stats are published:
 
-#### How to use?
-TODO
+1. CPU Temparature
+2. GPU Temparature
+3. Voltages: Core, SDRAM_C, SDRAM_I, SDRAM_P
+
+## How to use?
+1. Clone this repository.
+2. Open `config.json` and set the broker options.
+3. In `config.json`, change `topic.base` to the first part of the of topic, common to all published message topics.
+4. Optinally you can edit `topic.*` to customize the topic to which you want to publish
+
+## Update configurations online
+You can also update the configurations online by sending messages to specific topics. The following configurations can be updated online:
+
+| Setting         | Topic           | Example Payload  |
+| :-------------: |:---------------:| :---------------:|
+| Update Interval | `topic.base+"/config/interval"` | Send `10` to set update interval to 10 seconds |
 
 
 
-#### How to auto-start?
+## How to auto-start?
 You can use systemd to start this node program.
 
 1. Create a systemd file by
